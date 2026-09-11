@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gizlilik Politikası ve KVKK Aydınlatma Metni — D'Hondt Simülatörü</title>
+    <meta name="description" content="D'Hondt Simülatörü mobil uygulamasının gizlilik politikası ve KVKK aydınlatma metni." />
+    <style>
+      /* Uygulamayla aynı marka rengi ve token'lar; açık/koyu tema cihaz tercihine göre. */
+      :root {
+        --brand: #7c3aed;
+        --bg: #f4f5fa;
+        --surface: #ffffff;
+        --text: #191b24;
+        --muted: #6c6f80;
+        --border: #e2e4ec;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --brand: #8b5cf6;
+          --bg: #0c0d12;
+          --surface: #171922;
+          --text: #f1f2f6;
+          --muted: #9a9dac;
+          --border: #2a2d3a;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 32px 20px 64px;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      }
+      main { max-width: 760px; margin: 0 auto; }
+      .head { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+      .logo { width: 44px; height: 44px; flex: 0 0 auto; }
+      h1 { font-size: 1.45rem; margin: 0; letter-spacing: -0.01em; }
+      .stamp { color: var(--muted); font-size: 0.83rem; margin: 0 0 24px; }
+      section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin-bottom: 14px;
+      }
+      h2 { font-size: 1.02rem; margin: 0 0 10px; }
+      p { margin: 0 0 10px; color: var(--muted); }
+      p:last-child { margin-bottom: 0; }
+      ul { margin: 10px 0 0; padding-left: 20px; color: var(--muted); }
+      li { margin-bottom: 8px; }
+      li:last-child { margin-bottom: 0; }
+      a { color: var(--brand); }
+      footer { margin-top: 22px; color: var(--muted); font-size: 0.85rem; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="head">
+        <!-- Uygulama logosu: dhondt.tr'nin favicon.svg'si ile birebir aynı geometri -->
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true">
+          <rect width="48" height="48" rx="10" fill="#7e14ff" />
+          <circle cx="6" cy="33" r="4.5" fill="#ede6ff" />
+          <circle cx="11.27" cy="20.27" r="4.5" fill="#ede6ff" />
+          <circle cx="24" cy="15" r="4.5" fill="#ede6ff" />
+          <circle cx="36.73" cy="20.27" r="4.5" fill="#ede6ff" />
+          <circle cx="42" cy="33" r="4.5" fill="#ede6ff" />
+        </svg>
+        <h1>Gizlilik Politikası ve KVKK Aydınlatma Metni</h1>
+      </div>
+      <p class="stamp">D'Hondt Simülatörü (iOS / Android) · Son güncelleme: 11 Eylül 2026</p>
+
+      <section>
+        <p>D'Hondt Simülatörü (dhondt.tr), D'Hondt yöntemiyle milletvekili dağılımını hesaplayan bir karar destek aracıdır. Bu metin, uygulamayı kullanırken hangi kişisel verilerinizin işlendiğini, neden işlendiğini ve bu konuda hangi haklara sahip olduğunuzu açıklar.</p>
+      </section>
+
+      <section>
+        <h2>İşlenen veriler</h2>
+        <p>Uygulama yalnızca hizmetin çalışması için gereken verileri işler:</p>
+        <ul>
+          <li>E-posta adresiniz — hesap oluşturmak, giriş yapmak ve şifre sıfırlama bağlantısı göndermek için.</li>
+          <li>Şifreniz — doğrudan saklanmaz; Google Firebase Authentication tarafından geri döndürülemez biçimde özetlenerek (hash) tutulur. Uygulama şifrenizi hiçbir zaman görmez.</li>
+          <li>Oluşturduğunuz içerik — kaydettiğiniz senaryolar ve raporlar (seçim bölgesi, seçmen sayısı, katılım oranı, parti oy oranları, hesaplanan sandalye dağılımı) ve bunlara verdiğiniz isimler.</li>
+          <li>Teknik kayıtlar — Google Firebase, hizmetin güvenliği ve çalışması için bağlantı zamanı gibi asgari kayıtları kendi altyapısında tutar.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>İşlenmeyen veriler</h2>
+        <p>Uygulama reklam göstermez, reklam kimliği kullanmaz ve üçüncü taraf analitik/izleme aracı içermez. Konumunuza, kişilerinize, fotoğraflarınıza, kameranıza, mikrofonunuza veya cihaz tanımlayıcılarınıza erişmez; bunlar için izin istemez. Verileriniz hiçbir şekilde satılmaz, reklam amacıyla paylaşılmaz.</p>
+      </section>
+      <section>
+        <h2>Verilerin nerede saklandığı</h2>
+        <p>Hesap bilgileri ve kaydettiğiniz senaryolar/raporlar, Google LLC tarafından işletilen Firebase (Authentication ve Cloud Firestore) altyapısında saklanır. Bu, verilerin Türkiye dışındaki sunucularda işlenmesi anlamına gelir; hesap oluşturarak bu yurt dışı aktarımına açık rıza vermiş olursunuz.</p>
+        <p>Erişim kontrolü sunucu tarafındaki güvenlik kurallarıyla uygulanır: her kullanıcı yalnızca kendi kayıtlarını okuyabilir ve yazabilir. Başka bir kullanıcının senaryolarını görmeniz mümkün değildir.</p>
+      </section>
+      <section>
+        <h2>İşleme amacı ve hukuki dayanak</h2>
+        <p>Verileriniz yalnızca hizmeti sunmak için işlenir: hesabınızı oluşturmak, oturumunuzu sürdürmek ve kaydettiğiniz senaryoların cihazlarınız arasında (telefon ve dhondt.tr) senkron kalmasını sağlamak.</p>
+        <p>Hukuki dayanak KVKK m.5/2-c uyarınca sözleşmenin kurulması ve ifası için veri işlemenin zorunlu olmasıdır; yurt dışına aktarım bakımından ise KVKK m.9 kapsamındaki açık rızanızdır.</p>
+      </section>
+      <section>
+        <h2>Saklama süresi ve silme</h2>
+        <p>Verileriniz hesabınız var olduğu sürece saklanır. Hesabınızı uygulama içinden silebilirsiniz: Ana Sayfa → Hesap Ayarları → Hesabı Sil. Bu işlem kaydettiğiniz tüm senaryoları, raporları ve giriş bilginizi kalıcı olarak siler ve geri alınamaz.</p>
+        <p>Silmeden önce verilerinizi Hesap Ayarları → Verilerimi Dışa Aktar bölümünden JSON veya CSV olarak indirebilirsiniz.</p>
+      </section>
+      <section>
+        <h2>KVKK kapsamındaki haklarınız</h2>
+        <p>KVKK m.11 uyarınca veri sorumlusuna başvurarak şu haklara sahipsiniz:</p>
+        <ul>
+          <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme.</li>
+          <li>İşleme amacını ve verilerin amacına uygun kullanılıp kullanılmadığını öğrenme.</li>
+          <li>Verilerin yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme.</li>
+          <li>Verilerin eksik veya yanlış işlenmiş olması hâlinde düzeltilmesini isteme.</li>
+          <li>Verilerin silinmesini veya yok edilmesini isteme.</li>
+          <li>İşlemenin hukuka aykırı olması sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Çocukların gizliliği</h2>
+        <p>Uygulama siyaset ve seçim analizi üzerine bir profesyonel araçtır, çocuklara yönelik değildir ve bilerek 13 yaşın altındaki kullanıcılardan veri toplamaz.</p>
+      </section>
+      <section>
+        <h2>Değişiklikler</h2>
+        <p>Bu metin güncellenebilir. Güncel sürüm her zaman uygulama içinde ve yayınlanan sayfada erişilebilir durumda tutulur; metnin başındaki tarih son güncellenme zamanını gösterir.</p>
+      </section>
+      <section>
+        <h2>Veri sorumlusu ve iletişim</h2>
+        <p>Veri sorumlusu: Kaan Doğanay</p>
+        <p>Başvuru ve talepleriniz için: kaandoganay55@gmail.com</p>
+        <p>Talepleriniz KVKK m.13 uyarınca en geç otuz gün içinde yanıtlanır.</p>
+      </section>
+
+      <footer>
+        <a href="https://dhondt.tr">dhondt.tr</a>
+      </footer>
+    </main>
+  </body>
+</html>
